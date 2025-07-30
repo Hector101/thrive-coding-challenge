@@ -14,7 +14,7 @@ const initialState: TableState = {
   error: null,
   sortConfig: null,
   columnOrder: [
-    'id',
+    "id",
     "firstName",
     "lastName",
     "fullName",
