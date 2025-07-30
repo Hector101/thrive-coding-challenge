@@ -34,7 +34,7 @@ const SortableHeader = ({ column, children, id }: SortableHeaderProps) => {
       className="flex items-center gap-2 p-4 border-r border-border bg-muted font-semibold text-sm whitespace-nowrap"
       {...attributes}
     >
-      <div {...listeners} className="cursor-grab hover:cursor-grabbing">
+      <div {...listeners} className="cursor-grab hover:cursor-grabbing" title="Drag to rearrange">
         <GripVertical className="h-4 w-4 text-muted-foreground" />
       </div>
       <div className="flex-1 flex items-center justify-between">
@@ -44,6 +44,7 @@ const SortableHeader = ({ column, children, id }: SortableHeaderProps) => {
           size="sm"
           onClick={column.getToggleSortingHandler()}
           className="ml-2 h-6 w-6 p-0"
+          title="Sort By"
         >
           {column.getIsSorted() === "desc" ? (
             <ArrowDown className="h-3 w-3" />

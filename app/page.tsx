@@ -22,7 +22,7 @@ export default function Page() {
       <div className="container mx-auto p-6">
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-foreground">
-            User Data Visualization Table
+            User Dashboard
           </h1>
           <p className="text-muted-foreground mt-2">
             A high-performance table with virtualization, sorting, column

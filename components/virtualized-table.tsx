@@ -44,20 +44,12 @@ import {
 } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Skeleton } from "../components/ui/skeleton";
-import {
-  ArrowUpDown,
-  ArrowUp,
-  ArrowDown,
-  GripVertical,
-  RefreshCw,
-} from "lucide-react";
+import { RefreshCw } from "lucide-react";
 import TableRow from "./table-row";
 import SortableHeader from "./sortable-header";
 
 const ROW_HEIGHT = 60;
 const HEADER_HEIGHT = 80;
-
-
 
 export default function VirtualizedTable() {
   const dispatch = useAppDispatch();
@@ -216,7 +208,7 @@ export default function VirtualizedTable() {
               }
               className="font-mono whitespace-nowrap"
             >
-              {days} days
+              {days} Days
             </Badge>
           );
         },
@@ -366,10 +358,11 @@ export default function VirtualizedTable() {
                   )}
                 </SortableContext>
               </div>
-
+              
               <List
                 ref={listRef}
-                height={ROW_HEIGHT * 100}
+                width="100%"
+                height={600}
                 itemCount={
                   table.getRowModel().rows.length + (loadingMore ? 1 : 0)
                 }
