@@ -64,6 +64,7 @@ export default function VirtualizedTable() {
   const error = tableState?.error || null;
   const sortConfig = tableState?.sortConfig || null;
   const columnOrder = tableState?.columnOrder || [
+    "id",
     "firstName",
     "lastName",
     "fullName",
