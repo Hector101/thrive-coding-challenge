@@ -139,6 +139,24 @@ export default function VirtualizedTable() {
   const columns = useMemo<ColumnDef<UserWithComputed>[]>(() => {
     const baseColumns: ColumnDef<UserWithComputed>[] = [
       {
+        id: "id",
+        accessorKey: "id",
+        header: "ID",
+        size: 200,
+        cell: ({ getValue }) => {
+          const id = String(getValue());
+          return (
+            <Badge
+              className="font-mono w-[390px] truncate"
+              variant="secondary"
+              title={id}
+            >
+              {id.substring(0, 15)}...
+            </Badge>
+          );
+        },
+      },
+      {
         id: "firstName",
         accessorKey: "firstName",
         header: "First Name",
